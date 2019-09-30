@@ -180,20 +180,6 @@
             }
         },
         {
-            "data": "[     {         \"type\":\"mattermost\",         \"id\":\"connorturland@https://chat.holochain.org\"     } ]",
-            "tgt": {
-                "process": "CollectResponses ParticipantConfig",
-                "port": "in"
-            }
-        },
-        {
-            "data": "[     {         \"type\":\"mattermost\",         \"id\":\"connorturland@https://chat.holochain.org\"     } ]",
-            "tgt": {
-                "process": "SendMessageToAll ParticipantConfig",
-                "port": "in"
-            }
-        },
-        {
             "data": "BOT_CONFIG",
             "tgt": {
                 "process": "core/ReadEnv_o2973",
@@ -204,6 +190,20 @@
             "data": "",
             "tgt": {
                 "process": "BotConfig ParseJson",
+                "port": "in"
+            }
+        },
+        {
+            "data": "[     {         \"type\":\"telegram\",         \"id\":\"connorturland\"     } ]",
+            "tgt": {
+                "process": "CollectResponses ParticipantConfig",
+                "port": "in"
+            }
+        },
+        {
+            "data": "[     {         \"type\":\"telegram\",         \"id\":\"connorturland\"     } ]",
+            "tgt": {
+                "process": "SendMessageToAll ParticipantConfig",
                 "port": "in"
             }
         }
