@@ -25,7 +25,7 @@
             "metadata": {
                 "label": "BotConfig ParseJson",
                 "x": 72,
-                "y": 180,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -74,8 +74,8 @@
             "component": "core/ReadEnv",
             "metadata": {
                 "label": "ReadEnv",
-                "x": -144,
-                "y": 216,
+                "x": -180,
+                "y": 252,
                 "width": 72,
                 "height": 72
             }
@@ -116,8 +116,7 @@
             "tgt": {
                 "process": "rsf/CollectResponses_mbtdi",
                 "port": "contactable_configs"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -127,8 +126,7 @@
             "tgt": {
                 "process": "rsf/FormatStatementList_v9qk4",
                 "port": "statements"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -138,8 +136,7 @@
             "tgt": {
                 "process": "rsf/SendMessageToAll_rxtoo",
                 "port": "message"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -149,8 +146,7 @@
             "tgt": {
                 "process": "rsf/SendMessageToAll_rxtoo",
                 "port": "contactable_configs"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -160,8 +156,7 @@
             "tgt": {
                 "process": "BotConfig ParseJson",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": 60,
