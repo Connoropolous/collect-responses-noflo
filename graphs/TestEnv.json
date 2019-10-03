@@ -12,21 +12,31 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/ReadEnv_mr40c": {
-            "component": "core/ReadEnv",
+        "core/Output_foni6": {
+            "component": "core/Output",
             "metadata": {
-                "label": "ReadEnv",
-                "x": 540,
+                "label": "Output",
+                "x": 720,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Repeat_kov0o": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "Repeat",
+                "x": 360,
                 "y": 324,
                 "width": 72,
                 "height": 72
             }
         },
-        "core/Output_foni6": {
-            "component": "core/Output",
+        "core/MakeFunction_z4v9q": {
+            "component": "core/MakeFunction",
             "metadata": {
-                "label": "Output",
-                "x": 792,
+                "label": "MakeFunction",
+                "x": 540,
                 "y": 324,
                 "width": 72,
                 "height": 72
@@ -36,7 +46,20 @@
     "connections": [
         {
             "src": {
-                "process": "core/ReadEnv_mr40c",
+                "process": "core/Repeat_kov0o",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/MakeFunction_z4v9q",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/MakeFunction_z4v9q",
                 "port": "out"
             },
             "tgt": {
@@ -46,10 +69,17 @@
             "metadata": {}
         },
         {
-            "data": "BOT_CONFIG",
+            "data": "test",
             "tgt": {
-                "process": "core/ReadEnv_mr40c",
-                "port": "key"
+                "process": "core/Repeat_kov0o",
+                "port": "in"
+            }
+        },
+        {
+            "data": "return \"hi\" + x",
+            "tgt": {
+                "process": "core/MakeFunction_z4v9q",
+                "port": "function"
             }
         }
     ]
